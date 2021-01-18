@@ -28,13 +28,13 @@ $$
 &= 0
 \end{aligned}
 $$
+
 So we have:
+
 $$
 \int_C {dz\over (z-a)^n} =
-\left\{
-\begin{array}{}
+\begin{cases}{}
 2\pi i, &n=1\\
 0, &n\neq 1, &n\ is\ integer
-\end{array}
-\right.
+\end{cases}
 $$
