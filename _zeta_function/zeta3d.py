@@ -57,4 +57,4 @@ if __name__ == "__main__":
     file_index = 0
     for i in np.arange(0.01, 10.0, 0.01):
         file_index += 1
-        calc_zeta(i, "./_zeta_function/zeta3d_result/zeta_plot2_%s.png" % file_index)
+        calc_zeta(i, "./_zeta_function/zeta3d_result/zeta_plot_Re(s)=%s.png" % i)
