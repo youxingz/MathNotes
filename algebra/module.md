@@ -2,6 +2,10 @@
 
 ### Definition. Module $M$
 
+把 $R$-module 理解为：对一个对象 $M$，是否可用环 $R$ 来操作（action），如果有这个办法（homomorphism），就可以将 $M$ 当作一个 $R$-module.
+
+比如：任意交换群都是 $\Z$-module. 因为整数作用到交换群 $G$ 内的元素可以用 $ng=g+g+\cdots+g$ (n times) 表示（这种乘法可以理解为一种环作用），其明显满足 module 的 4 条公理。
+
 Let $R$ be a ring. A *left $R$-module* or a *left module over $R$* is a set $M$ together with
 
 1) a binary operation $+$ on $M$ under which $M$ is an abelian group.
