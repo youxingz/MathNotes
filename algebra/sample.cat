@@ -1,0 +1,66 @@
+object User
+  name: String
+  age: Int
+end
+
+object Doctor
+end
+
+morphism <User, User -> Bool>
+  def is_friend <user_a, user_b -> bool>
+    match(user_a.age = user_b.age) |> bool <- true
+    else(user_a.age = user_b.age) |> bool <- false
+
+    // ...
+    bool <- user_a.age = user_b.age
+  end
+end
+
+morphism <User, User -> Int>
+
+  def age_diff <user_a, user_b -> diff>
+    diff <- (user_a.age - user_b.age) |> abs
+  end
+
+end
+
+morphism <User -> User>
+  def growup <user -> user_b>
+    // continue add age
+    user_b.age = user.age + 1
+    user_b.age = user.age + 1
+    user_b.age = user.age + 1
+    user_b.age = user.age + 1
+    user_b.age = user.age + 1
+    user_b.age = user.age + 1
+  end
+
+  // test
+  user <- growup xiaoming
+  user.age <- 18 // ?
+  when(user.age = 18) |> dosomething() // when: will wait until age = 18
+
+end
+
+morphism <User -> Doctor>
+
+  def login <user -> doctor> (password: String)
+    match(user.age > 10) |> (...)
+    else(user.age > 10) |> (...)
+
+  end
+
+  def copyto <user -> doctor>
+    doctor.name <- user.name
+    doctor.age <- user.age
+  end
+
+end
+
+morphism <Bool -> Morphism>
+
+  def match <bool -> resolve>
+    bool ? resolve() : ()
+  end
+
+end
